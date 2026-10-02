@@ -51,7 +51,7 @@ function ChartContainer({
   )
 }
 
-function ChartTooltip(props: TooltipProps<number, string> & { content?: ReactElement }) {
+function ChartTooltip(props: TooltipProps<any, any> & { content?: React.ReactNode }) {
   return <Tooltip {...props} />
 }
 
