@@ -1,6 +1,7 @@
 import Navbar from "@/components/ui/navbar-02"
 import { ChartRadialSimple } from "@/components/chart-radial-simple"
 import { Button } from "@/components/ui/button"
+import { Default, Destructive } from "@/components/alert-examples"
 import Link from "next/link"
 
 export default function Demo() {
@@ -41,6 +42,15 @@ export default function Demo() {
         </div>
         <div className="w-full">
           <ChartRadialSimple />
+        </div>
+      </section>
+      <section className="mx-auto w-full max-w-7xl px-6 pb-16" aria-labelledby="alerts-heading">
+        <h2 id="alerts-heading" className="mb-5 text-xl font-semibold">
+          Alertas
+        </h2>
+        <div className="grid gap-4 md:grid-cols-2">
+          <Default />
+          <Destructive />
         </div>
       </section>
     </main>
