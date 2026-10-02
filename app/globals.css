@@ -4,6 +4,31 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@keyframes aurora-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(5vw, 3vh, 0) scale(1.12);
+  }
+}
+
+.animate-aurora {
+  animation: aurora-drift 16s ease-in-out infinite;
+}
+
+.animate-aurora-delayed {
+  animation: aurora-drift 19s ease-in-out -7s infinite reverse;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-aurora,
+  .animate-aurora-delayed {
+    animation: none;
+  }
+}
+
 @theme inline {
     --font-heading: var(--font-sans);
     --font-sans: var(--font-sans);
